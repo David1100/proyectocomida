@@ -1,0 +1,162 @@
+ *{
+           margin: 0;
+           padding: 0;
+           box-sizing: 0;
+       }
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    background: #ccc;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 10px;
+    background-size: cover;
+
+  }
+ header{
+    background: rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    
+ }
+.opciones{
+    margin: 10px;
+    display: flex;
+    height: 600px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.imgs{
+    display: flex;
+    justify-content: center;
+    
+}
+.im1{
+    padding: 5px;
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+}
+
+.imgs2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.im2{
+    width: 390px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+#imgs{
+    border-radius: 50%;
+    
+}
+
+
+h2{
+    position: absolute;
+    margin: auto;
+    color: #fff;
+    width: 390px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    position: absolute;
+    margin: auto;
+    color: #fff;
+    width: 390px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#arepa{
+   background: rgba(100,120,275,0.5);
+    color: aquamarine;
+}
+#desgra{
+   background: rgba(300,220,275,0.5); 
+}
+#papas{
+   background: rgba(100,220,275,0.5); 
+}
+#arepa:hover{
+    background: rgba(100,120,275,0.1);
+    cursor: pointer;
+    color: aqua;
+}
+#desgra:hover{
+    background: rgba(300,220,275,0.1);
+    cursor: pointer;
+}
+#papas:hover{
+    background: rgba(100,220,275,0.1);
+    cursor: pointer;
+}
+@media (max-width:800px){
+    .opciones{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;  
+}
+    .imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+    
+}
+    .im1{
+    margin-top: 2px;
+    padding: 1px;
+    width: 200px;
+   height: 240px;
+}
+    .im2{
+    margin-top: 10px;
+    
+    
+}
+
+    a{
+    width: 200px;
+     
+}
+    h2{
+    
+    width: 200px;
+   
+}
+h3{
+    
+    width: 200px;
+     
+}
+}

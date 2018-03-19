@@ -1,0 +1,139 @@
+*{
+           margin: 0;
+           padding: 0;
+           box-sizing: 0;
+    
+       }
+
+       .contenedor{
+    display: flex;
+    flex-direction: column;
+    background: #ccc;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-size: cover;
+    background-image: url('../img/desgranado_con_adiciones_0.jpg');
+           height: 120vh;
+         }
+       
+          header{
+          background: rgba(0,0,0,.2);
+          display: flex;
+          justify-content: center;
+    
+       }
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px
+    
+}
+.opciones{
+    padding: 5px 5px;
+    background: #ccc;
+    border-radius: 5px;
+    background: rgba(0,0,0,.7);
+    color: aliceblue;
+    
+}
+
+.paso22{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.paso22 p{
+    width: 280px;
+    margin: 0 20px;
+}
+.cuales{
+    
+}
+.cuales2{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.cuales2 p{
+     width: 200px;
+    margin: 0 20px;
+}
+
+.paso33{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.paso33 p{
+    width: 230px;
+    margin: 0 20px; 
+}
+
+
+.paso44{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.paso44 p{
+    width: 210px;
+    margin: 0 20px;
+}
+input[type=radio]{
+    display: none;
+}
+input[type=checkbox]{
+    display: none;
+}
+label{
+    margin-left: 30px;
+    
+}
+label:before{
+    content: '';
+    position: absolute;
+    left: -13px;
+    background: transparent;
+    border: 2px solid #fff; 
+    border-radius:5px;
+    height: 20px;
+    width: 20px;
+    transition: all 0.2s;
+    transform: rotate(0deg);
+    
+}
+input[type="radio"]:checked + label:before{
+    content: '✔';
+    font-size: 12px;
+    text-align: center;
+    transform: rotate(360deg);
+    color: #000;
+    background: #fff;
+}
+input[type="checkbox"]:checked + label:before{
+    content: '✔';
+    font-size: 12px;
+    text-align: center;
+    transform: rotate(360deg);
+    color: #000;
+    background: #fff;
+}
+@media(min-width:800px){
+    .opciones{
+   width: 90%;  
+    }
+    .contenido{
+    height: 100vh;
+    
+}
+}
+@media(min-width:1100px){
+    .opciones{
+   width: 50%;  
+    }
+    .contenido{
+    height: 100vh;
+    
+}
+}
