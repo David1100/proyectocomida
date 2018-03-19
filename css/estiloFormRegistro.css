@@ -19,6 +19,7 @@
           background: rgba(0,0,0,.2);
           display: flex;
           justify-content: center;
+          padding: 5px;
     
        }
 /*----------formulario------------*/
@@ -26,13 +27,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FFF;
-    height: 100%;
 }
 .titulo{
-    
     width: 100%;
     text-align: center;
+
 }
 .form1{
     padding: 5px 15px;
@@ -45,7 +44,8 @@
 }
 .btn1{
     text-align: center;
-    width: 100%
+    width: 100%;
+    margin: 25px 0px;;
 }
 #barrio{
     display: flex;
@@ -60,7 +60,6 @@
 }
 #ema{
     display: flex;
-    justify-content: space-between;
 }
 .dia{
     width: 50px;
@@ -71,7 +70,7 @@
     margin: 0px 1px;
 }
 .email{
-    width: 480px;
+    width: 100%;
 }
 #tel{
     display: flex;
@@ -86,8 +85,8 @@
 @media(min-width:600px){
     .form1{ 
        width: 600px; } 
- .contenedor{
-        height: 140h;    
-        }
+    .contenedor{
+        height: 130vh;
+    }
 }
     

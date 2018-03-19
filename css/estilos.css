@@ -8,7 +8,7 @@
 
 .contenedor{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     flex-direction: column;
     background: #ccc;
     background-repeat: no-repeat;
