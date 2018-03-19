@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ingredientes.css">
+    <link rel="stylesheet" href="../php/ingredientes.php">
+    
+    
     <title>Ingredientes</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -19,52 +23,53 @@
              
            
            <div class="paso2">
-              <h2>Paso 2: Escoja el numero de proteinas</h2>
-              <form class="paso22">
+              <h2>Escoja el numero de proteinas</h2>
+              <form class="paso22" id="formulario-1">
               <p>
-              <input type="radio" value="" id="1" name="proteina">
-              <label class="radio-inline" for="1">(una) Proteina $7800</label>   
+              <input type="radio"  id="1" name="proteina" class="micheckbox" value="1">
+              <label class="radio-inline" for="1">(una) Proteina $7.800</label>   
               </p>         
               <p>
-              <input type="radio" value="" id="2" name="proteina" >
-              <label class="checkbox-inline" for="2">(Dos) Proteinas $9800</label>   
+              <input type="radio"  id="2" name="proteina" class="micheckbox" value="2">
+              <label class="checkbox-inline" for="2">(Dos) Proteinas $9.800</label>   
               </p>
               <p>
-              <input type="radio" value="" id="3" name="proteina"> 
-              <label class="checkbox-inline" for="3">(Tres) Proteinas $13800</label>   
+              <input type="radio"  id="3" name="proteina" class="micheckbox" value="3"> 
+              <label class="checkbox-inline" for="3">(Tres) Proteinas $13.800</label>   
               </p>
               <p>
-              <input type="radio" value="" id="4" name="proteina">
-              <label class="checkbox-inline" for="4">(Cuatro) Proteinas $11800</label>   
+              <input type="radio"  id="4" name="proteina" class="micheckbox" value="4">
+              <label class="checkbox-inline" for="4">(Cuatro) Proteinas $11.800</label>   
               </p>
               <p>
-              <input type="radio" value="" id="5" name="proteina"> 
-              <label class="checkbox-inline" for="5">(Cinco) Proteinas 15800</label>    
+              <input type="radio"  id="5" name="proteina" class="micheckbox" value="5"> 
+              <label class="checkbox-inline" for="5">(Cinco) Proteinas $15.800</label>    
               </p> 
               </form>
+              
               <div class="cuales">
               <h3>Cuales?</h3>
-              <form class="cuales2">
+              <form class="cuales2" id="formulario-2">
               <p>
-               <input type="checkbox" value="" id="cerdo">
-               <label class="checkbox-inline" for="cerdo">Cerdo Bbq</label>   
+               <input type="checkbox"  id="cerdo" class="micheckbox-2" value="1">
+               <label class="checkbox-inline" for="cerdo" >Cerdo Bbq</label>   
               </p>
               <p>
-              <input type="checkbox" value="" id="carmol">
+              <input type="checkbox"  id="carmol" class="micheckbox-2" value="2">
               <label class="checkbox-inline" for="carmol">Carne molida</label>     
               </p>
               <p>
-              <input type="checkbox" value="" id="carmec">
+              <input type="checkbox"  id="carmec" class="micheckbox-2" value="3">
               <label class="checkbox-inline" for="carmec">Carne mechada</label>   
               </p>
               <p>
-              <input type="checkbox" value="" id="molleja">
+              <input type="checkbox"  id="molleja" class="micheckbox-2" value="4">
               <label class="checkbox-inline" for="molleja">Mollejas de pollo</label>    
               </p>
               <p>
-              <input type="checkbox" value="" id="pollo">
+              <input type="checkbox"  id="pollo" class="micheckbox-2" value="5">
               <label class="checkbox-inline" for="pollo">Pollo mechado</label>   
-              </p>
+              </p> 
               </form>   
               </div>   
            </div>
@@ -72,7 +77,7 @@
            
            
            <div class="paso3">
-              <h2>Paso 3: Escoja los componentes</h2>
+              <h2>Escoja los componentes</h2>
               <div class="paso33">
               <p>
               <input type="checkbox" value="" id="chicha">
@@ -118,7 +123,7 @@
            </div>
            
            <div class="paso4">
-              <h2>Paso 4: Escoja las salsas</h2>
+              <h2>Escoja las salsas</h2>
               <div class="paso44">
               <p>
               <input type="checkbox" value="" id="piña1">
@@ -151,12 +156,42 @@
               </div>             
            </div>
           </div>
+           <div class="btn">
+              <button type="submit" class="btn btn-primary" name="insertar">Agregar a la orden</button> 
+           </div>
        </div>
         
         
         
     </div>
-     <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../bootstrap-3.3.7-dist/js/jquery.js"></script>
+     
+<script>
+  $(document).ready(function(){
+
+    var variable_conteo = 0;
+    $("#formulario-1 >p input[type='radio']").click(function(){
+      variable_conteo =0;
+      $(".micheckbox-2:checked").attr("checked",false);
+      $(".micheckbox-2:checked").attr("disabled",false);
+      $('.micheckbox:checked').each(
+          function() {
+              variable_conteo = $(this).val();
+          }
+      );
+    });
+
+    $("#formulario-2 > p input[type='checkbox']").click(function(){
+      var conteo = 1;
+      $('.micheckbox-2:checked').each(
+          function() {
+              if(conteo>variable_conteo){
+                $(this).attr("checked",false);
+              }
+              conteo++;
+          }
+      );
+    });
+  });
+</script>
 </body>
 </html>
