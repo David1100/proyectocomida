@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+session_destroy();
+$valse = $_SESSION['usuario'];
+    if(!isset($valse)){
+        header("location:../index.php");  
+        die();
+}
+   
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,30 +62,30 @@
   <div class="form-group" id="ema">
    <div class="email">
     <label for="pwd">Email:</label>
-    <input type="email" class="form-control" id="pwd" name="email" required> 
+    <input type="text" class="form-control" id="pwd" name="email" required> 
    </div> 
     <div class="dia">
      <label for="pwd">dia:</label>
-    <input type="int" class="form-control" id="pwd" name="dia" required>
+    <input type="int" class="form-control" id="pwd" name="dia" onkeypress="return valida(event)" required>
    </div>
    <div class="mes">
      <label for="pwd">mes:</label>
-    <input type="int" class="form-control" id="pwd" name="mes" required>  
+    <input type="int" class="form-control" id="pwd" name="mes" onkeypress="return valida(event)" required>  
    </div>
   </div>
   <div class="form-group" id="tel">
    <div class="tel1">
     <label for="pwd">Telefono1:</label>
-    <input type="text" class="form-control" id="pwd" name="telefono" required>  
+    <input type="text" class="form-control" id="pwd" name="telefono"  onkeypress="return valida(event)" required>  
    </div>
   <div class="tel2">
     <label for="pwd">Telefono2:</label>
-    <input type="text" class="form-control" id="pwd" name="telefono2" required>  
+    <input type="text" class="form-control" id="pwd" name="telefono2" onkeypress="return valida(event)" required>  
   </div>
   </div>
   <div class="form-group">
     <label for="pwd">Contraseña:</label>
-    <input type="password" class="form-control" id="pwd" name="contrasena" required>
+    <input type="password" class="form-control" id="pwd" name="contrasena"  required>
   </div>
   <div class="btn1">
      <button type="submit" class="btn btn-primary" name="insertar">Registrar</button> 
@@ -83,7 +94,23 @@
 </div>
 </div>
   </div>
-   
+   <script type="text/javascript">
+       
+ function valida(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla==8){
+        return true;
+    }
+        
+    // Patron de entrada, en este caso solo acepta numeros
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+             
+    </script>
    
    
    

@@ -39,6 +39,19 @@
     
 }
 
+.paso11{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.paso11 p{
+    width: 150px;
+    margin: 0 20px;
+}
+.paso11{
+    display: flex;
+}
+
 .paso22{
     display: flex;
     flex-wrap: wrap;
@@ -74,10 +87,26 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 18px;
+    border-bottom: 2px solid #fff;
 }
 .paso44 p{
     width: 210px;
     margin: 0 20px;
+}
+.paso55{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    
+}
+.paso55 p{
+    width: 310px;
+    margin: 0 0px;
+}
+.esco{
+    display: flex;
+    justify-content: space-between;
 }
 input[type=radio]{
     display: none;
@@ -118,10 +147,19 @@ input[type="checkbox"]:checked + label:before{
     color: #000;
     background: #fff;
 }
-@media(min-width:800px){
+@media(min-width:600px){
     .opciones{
    width: 60%;  
     }
+    .contenedor{
+         
+    }
   
 }
-
+@media(min-width:1600px){
+    .opciones{
+   width: 50%;  
+    }
+    
+  
+}

@@ -37,25 +37,14 @@
     width: 100%;
 }
 .contenido1{
-    background: #ccc;
+    background: #fff;
     display: flex;
     flex-direction: column;
     padding: 10px;
-   
+    
+}
 
-}
-.ingredientes{
-    display: flex;
-    flex-direction: column; 
-}
-.opcion {
-    
-    padding: 10px;
-}
-.opcion div{
-    
-    border:2px solid  #fff;
-}
+
 
 .contenido2{
     
@@ -128,18 +117,24 @@ tbody a{
     justify-content: center;
     
 }
-.btn button{
+.btn {
     width: 100%;
 }
+.titulo2 h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio{
+    padding: 5px 50px;
+}
+
 
 
 
 @media (min-width:500px){
     
-    .ingredientes {
-        display: flex;
-        flex-direction: row;
-    }
+    
     header{
         display: flex;
         flex-wrap: nowrap;
@@ -154,28 +149,23 @@ tbody a{
 .total{
     margin: 0 10px;
 }
-    .opcion {
    
-   width: 200px
-}
-    .opcion div{
-        
-        height: 100px;
-    }
-    
+   
+
+   
    
 }
 @media (min-width:700px){
     .contenedor{
       display: flex; 
       flex-direction: row;
-      
-       
+           
     }
-    .ingredientes {
-        display: flex;
-        flex-direction: row;
-    }
+    .contenido1{
+    width: 100%;
+    
+}
+    
     header{
         width: 300px;
         display: flex;
@@ -187,17 +177,9 @@ tbody a{
     .titulo{
         padding: 10px;
     }
-    .form{
-        display: flex;
-        flex-direction: row;
-    }
-    .contenido1{
-        width: 50%;
-    }
-    .ingredientes{
-    display: flex;
-    flex-direction: column; 
-}
+    
+   
+  
      .redes{
          height: 100px;
          width: 100%;
@@ -225,28 +207,45 @@ tbody a{
         display: flex;
         flex-direction: column;
     }
-  
-    
+   
+     .form{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
-
-@media (min-width:1000px){
-    .ingredientes{
-        display: flex;
-        flex-direction: row;
-    }
+@media (min-width:900px){
     
-    .contenido2{
-        width: 50%;
-    }
-    .cont{
-        display: flex;
-        flex-direction: row;
-    }
-     .contenedor{
+    .contenedor{
         height: 100vh;
     }
+    .contenido1{
+        width: 50%;
+    }
+    .form{
+        display: flex;
+        flex-direction: row;
+    }
+  .cont{
+    display: flex;
+    flex-direction: row;
+}
+   
  
 }
+@media (min-width:1300px){
+    
+    
+    .contenido1{
+        width: 80%;
+    }
+  
+
+   
+ 
+}
+
+
+
        
       
 
